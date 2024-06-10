@@ -8,27 +8,22 @@
         body, html {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             background: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
         }
 
         .container {
-            width: 80%;
-            max-width: 600px;
+            width: 100%;
+            max-width: 800px;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            margin-top: 20px;
         }
 
-        h1, h2 {
+        h1 {
             color: #333;
         }
 
@@ -37,42 +32,69 @@
             font-size: 16px;
         }
 
+        .features {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .features h2 {
+            color: #333;
+        }
+
+        .features p {
+            margin-left: 20px;
+        }
+
+        .download-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .download-links a:hover {
+            background-color: #0056b3;
+        }
+
         form {
             margin-top: 20px;
-            text-align: left;
         }
 
         input[type="text"], input[type="email"], textarea {
-            width: 100%;
+            width: calc(100% - 22px);
             padding: 10px;
             margin-top: 8px;
-            box-sizing: border-box; /* Adds padding without affecting width */
             border: 1px solid #ccc;
             border-radius: 4px;
         }
 
         input[type="submit"] {
-            background-color: #4CAF50;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #28a745;
             color: white;
             border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
             border-radius: 4px;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #218838;
         }
 
         footer {
             margin-top: 20px;
-            font-size: 12px;
+            font-size: 14px;
             color: #777;
         }
 
         footer a {
-            color: #555;
+            color: #007bff;
             text-decoration: none;
         }
 
@@ -84,22 +106,25 @@
 <body>
     <div class="container">
         <h1>[Your App Name]</h1>
-        <p>Welcome to the ultimate app for your daily needs. Available on iOS and Android.</p>
+        <p>Welcome to [Your App Name], the ultimate app for your daily needs. Available on iOS and Android.</p>
+        <div class="features">
+            <h2>Features:</h2>
+            <p>✔ Feature 1: Describe the first key feature of your app.</p>
+            <p>✔ Feature 2: Describe the second key feature of your app.</p>
+            <p>✔ Feature 3: Describe the third key feature of your app.</p>
+        </div>
+        <div class="download-links">
+            <a href="[Google Play URL]" class="download-link">Get it on Google Play</a>
+            <a href="[App Store URL]" class="download-link">Download on the App Store</a>
+        </div>
         <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Feedback" required></textarea>
             <input type="submit" value="Send Feedback">
         </form>
-
         <footer>
-            <a href="terms.html">Terms and Conditions</a> | 
+            <a href="terms.html">Terms and Conditions</a> |
             <a href="privacy.html">Privacy Policy</a> |
             <a href="disclaimer.html">Disclaimer</a>
         </footer>
